@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GroupDetail">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/group_detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:theme="@style/ToolbarTheme"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/ic_arrow_back"
+                android:id="@+id/back"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="60dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ashenafi" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/profile_image"
+                android:textColor="@color/colorTitle"
+                android:layout_marginTop="60dp"
+                android:textSize="25dp"
+                android:text="Hello"
+                android:paddingLeft="25dp"
+                android:id="@+id/tv_title2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title2"
+                android:layout_toRightOf="@+id/profile_image"
+                android:paddingLeft="25dp"
+                android:textColor="@color/colorTitle"
+                android:textSize="15dp"
+                android:id="@+id/tv_members2"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Group detail here"
+        android:layout_below="@+id/group_detail_toolbar"
+        android:id="@+id/tv_group_detail"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec_group_students"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/tv_group_detail"/>
+
+
+</RelativeLayout>

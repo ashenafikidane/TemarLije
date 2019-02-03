@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/row_padding_vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/row_padding_vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/ashenafi" />
+
+    <TextView
+        android:id="@+id/studentname"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/profile_image"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="66dp"
+        android:textColor="@color/title"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/studentID"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/profile_image"
+        android:layout_alignStart="@+id/studentname"
+        android:layout_alignLeft="@+id/studentname"/>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/custom_checkbox"
+        android:layout_alignParentRight="true"/>
+
+
+
+
+
+</RelativeLayout>

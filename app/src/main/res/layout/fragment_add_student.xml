@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AddStudent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/add_student_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        android:background="@color/colorPrimary"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/add_student_toolbar"
+        android:id="@+id/add_profile_img"
+        android:src="@drawable/ic_photo_camera"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_student_toolbar"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/add_profile_img"
+        android:hint="Full Name(Required)"
+        android:id="@+id/et_full_name" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/et_full_name"
+        android:hint="Parent Name(Requred)"
+        android:id="@+id/et_parent"/>
+
+    <EditText
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/et_parent"
+        android:hint="Grade(Required)"
+        android:id="@+id/et_grade"/>
+
+    <EditText
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/et_parent"
+        android:layout_toRightOf="@+id/et_grade"
+        android:hint="Section(Required)"
+        android:id="@+id/et_section"/>
+
+</RelativeLayout>

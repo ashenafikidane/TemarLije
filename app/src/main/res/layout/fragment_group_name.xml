@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GroupName">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/group_name_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        android:background="@color/colorPrimary"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/group_name_toolbar"
+        android:id="@+id/add_profile_img"
+        android:src="@drawable/ic_photo_camera"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/add_profile_img"
+        android:hint="Enter Group Name"
+        android:id="@+id/et_groupName" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/add_profile_img"
+        android:background="#c1c1bb"
+        android:id="@+id/number_of_members"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec_showstudents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number_of_members"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>
